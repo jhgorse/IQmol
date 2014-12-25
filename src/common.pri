@@ -7,26 +7,29 @@ QMAKE_CXXFLAGS += -O2 -g
 #QMAKE_CXXFLAGS += -O0 -g
 
 macx {
+
    greaterThan(QT_MAJOR_VERSION, 4): CONFIG += home
    lessThan(QT_MAJOR_VERSION, 5):    CONFIG += work
    //CONFIG += release
 
    # QGLViewer
-   INCLUDEPATH += $(DEV)/libQGLViewer-2.5.3
-   LIBS        += $(DEV)/libQGLViewer-2.5.3/QGLViewer/libQGLViewer.a
+   INCLUDEPATH += /Library/Frameworks/QGLViewer.framework
+   LIBS        += /usr/local/lib/QGLViewer.framework/QGLViewer
 
    # gfortran
-   LIBS += -L$(DEV)/extlib/lib -lgfortran 
+   LIBS += -L/usr/local/Cellar/gcc/4.9.2/lib/gcc/x86_64-apple-darwin14.0.0/4.9.2 -lgfortran
+
+#-lgfortran
 
    # OpenMesh
-   INCLUDEPATH += $(DEV)/OpenMesh-2.4/src
-   LIBS        += $(DEV)/OpenMesh-2.4/build/Build/lib/OpenMesh/libOpenMeshCored.a
-   LIBS        += $(DEV)/OpenMesh-2.4/build/Build/lib/OpenMesh/libOpenMeshToolsd.a
+   INCLUDEPATH += /Users/jhg/Documents/work/OpenMesh-3.2/src
+   LIBS        += /Users/jhg/Documents/work/OpenMesh-3.2/build/Build/lib/OpenMesh/libOpenMeshCored.a
+   LIBS        += /Users/jhg/Documents/work/OpenMesh-3.2/build/Build/lib/OpenMesh/libOpenMeshToolsd.a
 
 
    # OpenBabel
-   INCLUDEPATH += /usr/local/include/openbabel-2.0
-   LIBS        += -L/usr/local/lib -lopenbabel
+   INCLUDEPATH += /usr/local/Cellar/open-babel/2.3.2/include/openbabel-2.0
+   LIBS        += -L/usr/local/Cellar/open-babel/2.3.2/lib -lopenbabel
 
    # Misc
    LIBS += -L/usr/X11/lib
@@ -53,17 +56,17 @@ home {
 
 work {
    # SSH2
-   INCLUDEPATH += $(DEV)/extlib/include/libssh2
-   LIBS        += -L$(DEV)/extlib/lib/libssh2/ -lssh2 -lcrypto
+   INCLUDEPATH += /usr/local/Cellar/libssh2/1.4.3_1/include
+   LIBS        += -L/usr/local/Cellar/libssh2/1.4.3_1/lib -lssh2 -lssl -lcrypto -lz -lcrypto -lz
 
    #libcrypto
    LIBS += -lcrypto
 
    # Boost
-   INCLUDEPATH += $(DEV)/boost_1_56_0/build/include
-   LIBS        += $(DEV)/boost_1_56_0/build/lib/libboost_iostreams.a
-   LIBS        += $(DEV)/boost_1_56_0/build/lib/libboost_serialization.a
-   LIBS        += $(DEV)/boost_1_56_0/build/lib/libboost_exception.a
+   INCLUDEPATH += /usr/local/include
+   LIBS        += /usr/local/lib/libboost_iostreams-mt.a
+   LIBS        += /usr/local/lib/libboost_serialization-mt.a
+#   LIBS        += /usr/local/lib/libboost_exception.a
 }
 
 

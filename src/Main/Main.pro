@@ -23,12 +23,13 @@ INCLUDEPATH += . ../Util ../Data ../Parser ../Qui ../Layer \
                 ../Configurator ../Network ../Yaml ../Process ../Old
 INCLUDEPATH += $$BUILD_DIR/Qui   # Required for the ui_QuiMainWindow.h header
 
-macx:FORMS       += $$PWD/PeriodicTableMac.ui
-win32:FORMS      += $$PWD/PeriodicTable.ui
-unix:!macx:FORMS += $$PWD/PeriodicTable.ui
+FORMS       += $$PWD/PeriodicTableMac.ui
+#win32:FORMS      += $$PWD/PeriodicTable.ui
+#unix:!macx:FORMS += $$PWD/PeriodicTable.ui
 
-!win32:OBJECTS += $(DEV)/extlib/obj/symmol.o
-win32:OBJECTS += $$PWD/symmol.o
+#!win32:OBJECTS += $(DEV)/extlib/obj/symmol.o
+#win32:!macx:OBJECTS += $$PWD/symmol.o
+OBJECTS += $$BUILD_DIR/symmol.o
 
 SOURCES += \
    $$PWD/FragmentTable.C \

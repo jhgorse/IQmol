@@ -155,7 +155,7 @@ QToolTip {
            <string>...</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/Up-down.png</normaloff>:/resources/icons/Up-down.png</iconset>
           </property>
           <property name="iconSize">
@@ -175,7 +175,7 @@ QToolTip {
            <string>+</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/Up.png</normaloff>:/resources/icons/Up.png</iconset>
           </property>
           <property name="iconSize">
@@ -195,7 +195,7 @@ QToolTip {
            <string>-</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/Down.png</normaloff>:/resources/icons/Down.png</iconset>
           </property>
           <property name="iconSize">
@@ -517,7 +517,7 @@ QToolTip {
            <string>...</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/GoBack.png</normaloff>:/resources/icons/GoBack.png</iconset>
           </property>
           <property name="iconSize">
@@ -542,7 +542,7 @@ QToolTip {
            <string>...</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/Play.png</normaloff>
             <normalon>:/resources/icons/Stop.png</normalon>:/resources/icons/Play.png</iconset>
           </property>
@@ -566,7 +566,7 @@ QToolTip {
            <string>...</string>
           </property>
           <property name="icon">
-           <iconset resource="IQmol.qrc">
+           <iconset resource="../Main/IQmol.qrc">
             <normaloff>:/resources/icons/GoForward.png</normaloff>:/resources/icons/GoForward.png</iconset>
           </property>
           <property name="iconSize">
@@ -736,7 +736,7 @@ QToolTip {
   <tabstop>cancelButton</tabstop>
  </tabstops>
  <resources>
-  <include location="IQmol.qrc"/>
+  <include location="../Main/IQmol.qrc"/>
  </resources>
  <connections>
   <connection>

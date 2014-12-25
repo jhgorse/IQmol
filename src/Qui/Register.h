@@ -16,6 +16,7 @@
 #include <map>
 #include <cstdlib>
 #include <QString>
+#include <stdlib.h>
 
 
 namespace Qui {
@@ -30,7 +31,7 @@ class Register {
 #ifdef Q_OS_LINUX
             atexit(Register::destroy);
 #else
-            ::std::atexit(Register::destroy);
+            atexit(Register::destroy);
 #endif
          }
          return *s_instance;

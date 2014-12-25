@@ -43,7 +43,7 @@ OptionDatabase& OptionDatabase::instance() {
 #ifdef Q_OS_LINUX
       atexit(OptionDatabase::destroy);
 #else
-      std::atexit(OptionDatabase::destroy);
+      atexit(OptionDatabase::destroy);
 #endif
    }
 
