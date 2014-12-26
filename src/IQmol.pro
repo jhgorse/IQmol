@@ -17,14 +17,14 @@ TEMPLATE = subdirs
 
 SUBDIRS  = Util \
            Data \
+           Process \
+           Old \
            Qui \
            Parser \
            Network \
            Yaml \
            Configurator \
            Layer \
-           Old \
-           Process \
 
 win32:SUBDIRS += OpenBabel \
 
